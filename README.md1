@@ -1,0 +1,162 @@
+📘 PROJETO 2 — Sistema de Detecção de Defeitos Industriais com CNN
+
+Este projeto implementa um sistema de Visão Computacional capaz de identificar automaticamente peças com defeito e peças normais utilizando uma Rede Neural Convolucional (CNN) desenvolvida em TensorFlow/Keras.
+
+O objetivo é simular um caso real de Indústria 4.0, onde câmeras monitoram produtos em linha de produção e classificam automaticamente defeitos.
+
+🧠 Tecnologias Utilizadas
+
+Python
+
+TensorFlow / Keras
+
+OpenCV
+
+NumPy
+
+Matplotlib
+
+Google Colab (execução opcional)
+
+🏭 Objetivo do Projeto
+
+Criar um modelo capaz de classificar imagens de peças industriais em duas categorias:
+
+🟢 Normal
+
+🔴 Com Defeito
+
+Após o treinamento, o modelo pode ser usado para inspecionar peças individualmente, simulando um processo real de inspeção visual automática.
+
+📂 Estrutura do Dataset
+
+O dataset deve ser organizado nesta estrutura:
+
+data/
+ ├── normal/
+ │     ├── imagem1.jpg
+ │     ├── imagem2.jpg
+ │     └── ...
+ └── defeito/
+       ├── imagem1.jpg
+       ├── imagem2.jpg
+       └── ...
+
+
+Cada pasta deve conter imagens correspondentes à sua classe.
+
+⚙️ Como o Modelo Funciona
+
+A CNN foi projetada para:
+
+Extrair padrões visuais (texturas, bordas, falhas)
+
+Aprender diferenças entre peças normais e defeituosas
+
+Classificar automaticamente novas imagens
+
+O modelo utiliza:
+
+Convoluções
+
+MaxPooling
+
+Dropout para evitar overfitting
+
+Finalização com camada sigmoide (saída binária)
+
+🚀 Passo a Passo para Execução
+1️⃣ Importar bibliotecas e verificar TensorFlow
+
+Inclui:
+
+TensorFlow
+
+ImageDataGenerator
+
+OpenCV
+
+Matplotlib
+
+NumPy
+
+2️⃣ Preparação do Dataset
+
+Uso de ImageDataGenerator com aumentação de dados:
+
+Rotação
+
+Zoom
+
+Flip horizontal
+
+Split automático para validação
+
+3️⃣ Construção do Modelo (CNN Profissional)
+
+Três blocos Conv2D + MaxPooling, com dropout e camada final densa.
+
+4️⃣ Treinamento
+
+Com Early Stopping para evitar overfitting.
+
+5️⃣ Gráficos
+
+Plot da curva de loss e accuracy do treinamento e validação.
+
+6️⃣ Salvando o Modelo
+
+Gera o arquivo:
+
+modelo_defeitos.h5
+
+7️⃣ Teste com Imagem Individual
+
+Função prever_imagem() que:
+
+Carrega a imagem
+
+Processa e normaliza
+
+Faz a previsão
+
+Exibe o resultado e a imagem
+
+🧪 Exemplo de Teste
+prever_imagem("/content/data/defeito/img10.jpg")
+
+
+Saída esperada:
+
+🔴 DEFEITO DETECTADO (92.34%)
+
+📊 Resultados Esperados
+
+Com um dataset bem distribuído, o modelo atinge:
+
+85% a 95% de acurácia
+
+Este projeto é semelhante a sistemas usados em:
+
+- Linhas de produção automatizadas
+- Controle de qualidade visual
+- Sistemas de inspeção óptica (AOI)
+- Robôs industriais com visão computacional
+- Monitoramento de peças e componentes
+
+ Conceitos Aplicados:
+
+- Visão Computacional
+- Redes Neurais Convolucionais
+- Aumentação de Imagens
+- Classificação Binária
+- Pipeline de Machine Learning
+- Indústria 4.0
+
+  Autor:
+  
+*Projeto criado por Guilherme Gomes*
+
+
+
+Identificação visual consistente
