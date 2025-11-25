@@ -1,1 +1,80 @@
+# 🏭 Manutenção Preditiva com Inteligência Artificial  
+### Prevendo falhas industriais com Machine Learning • Indústria 4.0
+
+Este projeto aplica **Machine Learning** para prever falhas em máquinas industriais utilizando dados simulados de sensores.  
+O objetivo é demonstrar como algoritmos de IA podem **reduzir paradas inesperadas**, **aumentar eficiência** e **melhorar a tomada de decisão na indústria**.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+- Python 3
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib & Seaborn
+- Joblib (salvamento do modelo)
+
+---
+
+## 🎯 Objetivos do Projeto
+- Construir um dataset realista simulando sensores industriais:
+  - Vibração  
+  - Temperatura  
+  - Pressão  
+- Treinar um modelo Random Forest para prever falhas.
+- Avaliar o modelo com métricas profissionais:
+  - Matriz de Confusão  
+  - Acurácia  
+  - Precision / Recall / F1  
+- Gerar gráficos e análises explicativas.
+- Exportar o modelo final para uso em aplicações industriais.
+
+---
+
+## 📂 Estrutura do Repositório
+
+predictive-maintenance/
+│ README.md
+│ dataset_simulado.csv
+│ modelo_manutencao_predictivo.joblib
+│
+└── notebooks/
+└── manutencao_preditiva.ipynb
+
+---
+
+## 📊 Resultados Principais
+
+- O modelo Random Forest obteve **alta acurácia** mesmo com dados desbalanceados.
+- Gráficos de importância das variáveis mostram quais sensores impactam mais nas falhas.
+- Pipeline totalmente reproduzível e pronto para ser ampliado.
+
+---
+
+## 🧪 Exemplo de Uso — Previsão
+
+```python
+novo = pd.DataFrame({
+    "vibration":[0.75],
+    "temperature":[72],
+    "pressure":[29]
+})
+
+modelo = joblib.load("modelo_manutencao_predictivo.joblib")
+print(modelo.predict(novo))
+
+Melhorias Futuras:
+
+- Implementar redes neurais (MLP ou LSTM)
+- Criar dashboard com Streamlit
+- Conectar com sensores IoT reais
+- API com FastAPI para servir o modelo
+- Detecção de anomalias em tempo real
+
+Autor:
+
+*Guilherme Gomes*
+
+Projeto criado para estudos em Automação Industrial, IA e Engenharia de Computação.
+
 
